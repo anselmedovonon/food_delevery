@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delevery/colors.dart';
+import 'package:food_delevery/dimensions.dart';
 import 'package:food_delevery/small_text.dart';
 import 'package:food_delevery/widgets/big_text.dart';
 
@@ -16,13 +17,15 @@ class MainFoodPage extends StatefulWidget {
 class _MainFoodPageState extends State<MainFoodPage> {
   @override
   Widget build(BuildContext context) {
+    print("current height is "+MediaQuery.of(context).size.height.toString());
     return Scaffold(
       body: Column(
         children: [
+
           Container(
             child: Container(
-              margin: EdgeInsets.only(top: 45, bottom: 15),
-              padding: EdgeInsets.only(left: 20, right: 20),
+              margin: EdgeInsets.only(top: Dimensions.heigth45, bottom: Dimensions.heigth15),
+              padding: EdgeInsets.only(left: Dimensions.width20, right: Dimensions.width20),
 
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -44,11 +47,11 @@ class _MainFoodPageState extends State<MainFoodPage> {
                   ),
                   Center(
                     child: Container(
-                      width: 45,
-                      height: 45,
-                      child: Icon(Icons.search, color: Colors.white),
+                      width: Dimensions.heigth45,
+                      height: Dimensions.heigth45,
+                      child: Icon(Icons.search, color: Colors.white, size:Dimensions.iconSize),
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
+                        borderRadius: BorderRadius.circular(Dimensions.raduis15),
                         color: AppColors.mainColor,
                       ),
                     ),
